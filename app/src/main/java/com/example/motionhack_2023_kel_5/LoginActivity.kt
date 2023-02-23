@@ -6,13 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
     lateinit var editEmail : EditText
     lateinit var editPassword : EditText
-    lateinit var btnRegister : Button
+    lateinit var btnRegister : TextView
     lateinit var btnLogin : Button
 
     //Animasi Loading
@@ -48,6 +49,9 @@ class LoginActivity : AppCompatActivity() {
             }
         }
         btnRegister.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
+        btnRegister.setOnClickListener(){
             startActivity(Intent(this, RegisterActivity::class.java))
         }
     }

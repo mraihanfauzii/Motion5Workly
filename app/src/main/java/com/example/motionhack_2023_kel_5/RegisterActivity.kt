@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import com.google.firebase.auth.FirebaseAuth
@@ -14,11 +15,10 @@ import com.google.firebase.auth.ktx.userProfileChangeRequest
 class RegisterActivity : AppCompatActivity() {
     lateinit var editFullName : EditText
     lateinit var editEmail : EditText
-    lateinit var editNoTelepon : EditText
     lateinit var editPassword : EditText
     lateinit var editPasswordConfirmation : EditText
     lateinit var btnRegister : Button
-    lateinit var btnLogin : Button
+    lateinit var btnLogin : TextView
 
     //Animasi loading
     lateinit var progressDialog: ProgressDialog
