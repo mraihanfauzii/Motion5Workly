@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "459910307787",
+    "project_id": "motionhack-cae65",
+    "storage_bucket": "motionhack-cae65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459910307787:android:151930bf5befc015ece04e",
+        "android_client_info": {
+          "package_name": "com.example.motionhack_2023_kel_5"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459910307787-461ggli9568gp10bu0ped4f89v7302b0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz49Hs1kMaqYKBtIgKrch4nobRXzO_JAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459910307787-461ggli9568gp10bu0ped4f89v7302b0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
