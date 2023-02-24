@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.motionhack_2023_kel_5.adapter.CreatorListAdapter
+import com.example.motionhack_2023_kel_5.adapter.MeetingListAdapter
+import com.example.motionhack_2023_kel_5.adapter.ProfessionListAdapter
 import com.example.motionhack_2023_kel_5.creatorProfile.CreatorProfileActivity
 import com.example.motionhack_2023_kel_5.data.Creators.Creator
 import com.example.motionhack_2023_kel_5.data.Meetings.Meeting
@@ -24,7 +26,9 @@ class DiscoverFragment : Fragment() {
     private lateinit var Creator: Creator
     private lateinit var CreatorAdapter:CreatorListAdapter
     private lateinit var Meeting: Meeting
+    private lateinit var MeetingAdapter: MeetingListAdapter
     private lateinit var Profession: Profession
+    private lateinit var ProfessionAdapter: ProfessionListAdapter
 
     companion object{
         const val Creator_ID = "com.example.motionhack_2023_kel_5.fragments.idCreator"
@@ -37,6 +41,8 @@ class DiscoverFragment : Fragment() {
         discoverMvvm = ViewModelProviders.of(this)[DiscoverViewModel::class.java]
 
         CreatorAdapter = CreatorListAdapter()
+        MeetingAdapter = MeetingListAdapter()
+        ProfessionAdapter = ProfessionListAdapter()
     }
 
     override fun onCreateView(
@@ -73,14 +79,14 @@ class DiscoverFragment : Fragment() {
     private fun meetingRecyclerView() {
         binding.rvUpcomingSessions.apply {
             layoutManager = LinearLayoutManager(activity,LinearLayoutManager.HORIZONTAL,false)
-            adapter = CreatorAdapter
+            adapter = MeetingAdapter
         }
     }
 
     private fun professionRecyclerView() {
         binding.rvCategories.apply {
             layoutManager = LinearLayoutManager(activity,LinearLayoutManager.HORIZONTAL,false)
-            adapter = CreatorAdapter
+            adapter = ProfessionAdapter
         }
     }
 
@@ -94,20 +100,20 @@ class DiscoverFragment : Fragment() {
     private fun observerMeeting() {
         discoverMvvm.observeMeetingLiveData().observe(viewLifecycleOwner
         ) { meetingList->
-            CreatorAdapter.setMeetings(meetingsList = meetingList as ArrayList<Meeting>)
+            MeetingAdapter.setMeetings(meetingsList = meetingList as ArrayList<Meeting>)
         }
     }
 
     private fun observerProfession() {
-        discoverMvvm.observeCreatorLiveData().observe(viewLifecycleOwner
-        ) { creatorList->
-            CreatorAdapter.setProfessions(professionsList = creatorList as ArrayList<Profession>)
+        discoverMvvm.observeProfessionLiveData().observe(viewLifecycleOwner
+        ) { professionList->
+            ProfessionAdapter.setProfessions(professionsList = professionList as ArrayList<Profession>)
         }
     }
 
     private fun onCreatorClick() {
-        binding.rvCheckThemOut.setOnClickListener {
-            val intent = Intent(activity, CreatorProfileActivity::class.java)
+        CreatorAdapter.onItemClick = { Creator ->
+            val intent = Intent(activity,CreatorProfileActivity::class.java)
             intent.putExtra(Creator_ID,Creator.id)
             intent.putExtra(Creator_Name,Creator.name)
             intent.putExtra(Creator_Picture,Creator.profilePhoto)

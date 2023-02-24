@@ -10,22 +10,11 @@ import com.example.motionhack_2023_kel_5.data.Professions.Profession
 import com.example.motionhack_2023_kel_5.databinding.CreatorlistBinding
 
 class CreatorListAdapter():RecyclerView.Adapter<CreatorListAdapter.CreatorListViewHolder>() {
+    lateinit var onItemClick:((Creator) -> Unit)
     private var creatorsList = ArrayList<Creator>()
-    private var meetingsList = ArrayList<Meeting>()
-    private var professionsList = ArrayList<Profession>()
 
     fun setCreators(creatorsList:ArrayList<Creator>){
         this.creatorsList = creatorsList
-        notifyDataSetChanged()
-    }
-
-    fun setMeetings(meetingsList:ArrayList<Meeting>){
-        this.meetingsList = meetingsList
-        notifyDataSetChanged()
-    }
-
-    fun setProfessions(professionsList:ArrayList<Profession>){
-        this.professionsList = professionsList
         notifyDataSetChanged()
     }
 
@@ -37,6 +26,10 @@ class CreatorListAdapter():RecyclerView.Adapter<CreatorListAdapter.CreatorListVi
         Glide.with(holder.itemView)
             .load(creatorsList[position].profilePhoto)
             .into(holder.binding.ivCreator)
+
+        holder.itemView.setOnClickListener {
+            onItemClick.invoke(creatorsList[position])
+        }
     }
 
     override fun getItemCount(): Int {
