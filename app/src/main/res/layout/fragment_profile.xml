@@ -3,272 +3,454 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#89CFF0"
+    android:background="#FFFFFF"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="ProfileFragment">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="350dp"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_user"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="125sp"
+        android:layout_marginEnd="270sp"
+        android:layout_marginBottom="619sp"
+        android:background="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/edt_name"
+        android:layout_width="147dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="151dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="663dp"
+        android:fontFamily="@font/pops"
+        android:hint="nama"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="57dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="553dp"
+        android:fontFamily="@font/pops"
+        android:text="General"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="311dp"
+        android:layout_marginEnd="333dp"
+        android:layout_marginBottom="509dp"
+        android:src="@drawable/img" />
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:background="#181818"
-        app:cardCornerRadius="20dp">
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="311dp"
+        android:layout_marginEnd="254dp"
+        android:layout_marginBottom="508dp"
+        android:fontFamily="@font/pops"
+        android:text="My Profile"
+        android:textColor="#000000"
+        android:textSize="14dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="30dp">
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="359dp"
+        android:layout_marginEnd="333dp"
+        android:layout_marginBottom="460dp"
+        android:src="@drawable/img_1" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:backgroundTint="#181818"
-                android:text="User Profile"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold"/>
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/civ_user"
-                android:layout_marginTop="10dp"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:background="@drawable/profile"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:backgroundTint="#181818"
-                android:text="*Tap base profile picture to set picture"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="italic"
-                android:textSize="10sp"/>
-            <TextView
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="Name"
-                />
-
-            <TextView
-                android:id="@+id/edt_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Name"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:text="Email"/>
-
-            <TextView
-                android:id="@+id/edt_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Email" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:text="No Telepon"/>
-
-            <TextView
-                android:id="@+id/edt_no_telepon"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="No Telepon" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:layout_marginTop="5dp"
-                android:text="Lupa password ?"
-                android:textAlignment="center"/>
-
-            <Button
-                android:id="@+id/btn_changePassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Change Password"
-                android:backgroundTint="#e50914"/>
-
-            <Button
-                android:id="@+id/btn_deleteAccount"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Delete Account"
-                android:backgroundTint="#831010"/>
-
-            <Button
-                android:id="@+id/btn_logout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Logout"
-                android:backgroundTint="#181818"/>
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    //card view update password
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_updatePassword"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_margin="10dp"
-        android:visibility="gone"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="7dp">
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="363dp"
+        android:fontFamily="@font/pops"
+        android:text="Bookmarks"
+        android:textColor="#000000"
+        android:textSize="14dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="20dp">
+    <TextView
+        android:layout_width="57dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="463dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="360dp"
+        android:fontFamily="@font/pops"
+        android:text="General"
+        android:textColor="#000000"
+        android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_marginTop="5dp"
-                android:text="New Password ?"
-                android:textAlignment="center"/>
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="512dp"
+        android:layout_marginEnd="333dp"
+        android:layout_marginBottom="308dp"
+        android:src="@drawable/img_3" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-                app:passwordToggleEnabled="true">
-
-                <EditText
-                    android:id="@+id/edt_newPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Confirm Password"
-                    android:inputType="textPassword"
-                    app:passwordToggleEnabled="true"/>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-                app:passwordToggleEnabled="true">
-                <EditText
-                    android:id="@+id/edt_confirmPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Confirm Password"
-                    android:inputType="textPassword"/>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btn_newCancel"
-                    android:layout_width="10dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="5dp"
-                    android:text="Cancel"
-                    android:layout_weight="2"/>
-
-                <Button
-                    android:id="@+id/btn_newChange"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="5dp"
-                    android:layout_gravity="center"
-                    android:text="Change"
-                    android:layout_weight="1"/>
-            </LinearLayout>
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    //card view current password
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_currentPassword"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_margin="20dp"
-        android:visibility="gone"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="7dp">
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="516dp"
+        android:layout_marginBottom="307dp"
+        android:fontFamily="@font/pops"
+        android:text="Help"
+        android:textColor="#000000"
+        android:textSize="14dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="20dp">
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="560dp"
+        android:layout_marginEnd="333dp"
+        android:layout_marginBottom="260dp"
+        android:src="@drawable/img_4" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_marginTop="5dp"
-                android:text="Current Password ?"
-                android:textAlignment="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="563dp"
+        android:layout_marginBottom="260dp"
+        android:fontFamily="@font/pops"
+        android:text="Seettings"
+        android:textColor="#000000"
+        android:textSize="14dp" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-                app:passwordToggleEnabled="true">
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="608dp"
+        android:layout_marginEnd="333dp"
+        android:layout_marginBottom="212dp"
+        android:src="@drawable/img_5" />
 
-                <EditText
-                    android:id="@+id/edt_currentPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Current Password"
-                    android:inputType="textPassword"
-                    app:passwordToggleEnabled="true"/>
-            </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="611dp"
+        android:layout_marginBottom="211dp"
+        android:fontFamily="@font/pops"
+        android:text="About"
+        android:textColor="#000000"
+        android:textSize="14dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="658dp"
+        android:layout_marginEnd="333dp"
+        android:layout_marginBottom="212dp"
+        android:src="@drawable/img_6" />
 
-                <Button
-                    android:id="@+id/btn_cancel"
-                    android:layout_width="10dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="5dp"
-                    android:text="Cancel"
-                    android:layout_weight="2"/>
+    <TextView
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="659dp"
+        android:layout_marginBottom="164dp"
+        android:fontFamily="@font/pops"
+        android:text="Logout"
+        android:textColor="#000000"
+        android:textSize="14dp" />
 
-                <Button
-                    android:id="@+id/btn_confirm"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="5dp"
-                    android:layout_gravity="center"
-                    android:text="Confirm"
-                    android:layout_weight="1"/>
-            </LinearLayout>
+    <TextView
+        android:id="@+id/edt_email"
+        android:layout_width="174dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="182dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="641dp"
+        android:fontFamily="@font/pops"
+        android:hint="email"
+        android:textStyle="bold" />
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:background="#181818"-->
+<!--        app:cardCornerRadius="20dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="30dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:backgroundTint="#181818"-->
+<!--                android:text="User Profile"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textStyle="bold"/>-->
+
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:id="@+id/civ_user"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:background="@drawable/profile"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:backgroundTint="#181818"-->
+<!--                android:text="*Tap base profile picture to set picture"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="italic"-->
+<!--                android:textSize="10sp"/>-->
+<!--            <TextView-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textStyle="bold"-->
+<!--                android:text="Name"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/edt_name"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Name"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:text="Email"/>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/edt_email"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Email" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:text="No Telepon"/>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/edt_no_telepon"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="No Telepon" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:text="Lupa password ?"-->
+<!--                android:textAlignment="center"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btn_changePassword"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:text="Change Password"-->
+<!--                android:backgroundTint="#e50914"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btn_deleteAccount"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:text="Delete Account"-->
+<!--                android:backgroundTint="#831010"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btn_logout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:text="Logout"-->
+<!--                android:backgroundTint="#181818"/>-->
+<!--        </LinearLayout>-->
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+<!--    //card view update password-->
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cv_updatePassword"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:visibility="gone"-->
+<!--        app:cardCornerRadius="20dp"-->
+<!--        app:cardElevation="7dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="20dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:text="New Password ?"-->
+<!--                android:textAlignment="center"/>-->
+
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="10dp"-->
+<!--                app:passwordToggleEnabled="true">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/edt_newPassword"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Confirm Password"-->
+<!--                    android:inputType="textPassword"-->
+<!--                    app:passwordToggleEnabled="true"/>-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="10dp"-->
+<!--                app:passwordToggleEnabled="true">-->
+<!--                <EditText-->
+<!--                    android:id="@+id/edt_confirmPassword"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Confirm Password"-->
+<!--                    android:inputType="textPassword"/>-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btn_newCancel"-->
+<!--                    android:layout_width="10dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="5dp"-->
+<!--                    android:text="Cancel"-->
+<!--                    android:layout_weight="2"/>-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btn_newChange"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="5dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:text="Change"-->
+<!--                    android:layout_weight="1"/>-->
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+<!--    //card view current password-->
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cv_currentPassword"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:visibility="gone"-->
+<!--        app:cardCornerRadius="20dp"-->
+<!--        app:cardElevation="7dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="20dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:text="Current Password ?"-->
+<!--                android:textAlignment="center"/>-->
+
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="10dp"-->
+<!--                app:passwordToggleEnabled="true">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/edt_currentPassword"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Current Password"-->
+<!--                    android:inputType="textPassword"-->
+<!--                    app:passwordToggleEnabled="true"/>-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btn_cancel"-->
+<!--                    android:layout_width="10dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="5dp"-->
+<!--                    android:text="Cancel"-->
+<!--                    android:layout_weight="2"/>-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btn_confirm"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="5dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:text="Confirm"-->
+<!--                    android:layout_weight="1"/>-->
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
 
 </RelativeLayout>

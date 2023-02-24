@@ -54,7 +54,7 @@ class ProfileFragment : Fragment() {
             //}
             binding.edtName.setText(user.displayName)
             binding.edtEmail.setText(user.email)
-            binding.edtNoTelepon.setText(user.phoneNumber)
+
 
         }
 
@@ -66,115 +66,115 @@ class ProfileFragment : Fragment() {
             btnLogout()
         }
 
-        binding.btnChangePassword.setOnClickListener {
-            changePassword()
-        }
-
-        binding.btnDeleteAccount.setOnClickListener {
-            deleteAccount()
-        }
+//        binding.btnChangePassword.setOnClickListener {
+//            changePassword()
+//        }
+//
+//        binding.btnDeleteAccount.setOnClickListener {
+//            deleteAccount()
+//        }
     }
 
-    private fun deleteAccount(){
-        //Hapus Akun
-        auth = FirebaseAuth.getInstance()
-        val user = auth.currentUser
-
-        binding.btnDeleteAccount.setOnClickListener {
-            user?.delete()?.addOnCompleteListener {
-                //Akun sudah dihapus
-                if (it.isSuccessful){
-                    auth.signOut()
-                    activity?.finish()
-                    val intent = Intent(context, LoginActivity::class.java)
-                    startActivity(intent)
-                }
-                Toast.makeText(activity, "Account successfully deleted!", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
+//    private fun deleteAccount(){
+//        //Hapus Akun
+//        auth = FirebaseAuth.getInstance()
+//        val user = auth.currentUser
+//
+//        binding.btnDeleteAccount.setOnClickListener {
+//            user?.delete()?.addOnCompleteListener {
+//                //Akun sudah dihapus
+//                if (it.isSuccessful){
+//                    auth.signOut()
+//                    activity?.finish()
+//                    val intent = Intent(context, LoginActivity::class.java)
+//                    startActivity(intent)
+//                }
+//                Toast.makeText(activity, "Account successfully deleted!", Toast.LENGTH_SHORT).show()
+//            }
+//        }
+//    }
 
     //Ganti Password
-    private fun changePassword() {
-        auth = FirebaseAuth.getInstance()
-        val user = auth.currentUser
-
-        binding.cvCurrentPassword.visibility = View.VISIBLE
-
-        binding.btnCancel.setOnClickListener {
-            binding.cvCurrentPassword.visibility
-        }
-        binding.btnConfirm.setOnClickListener btnConfirm@{
-            val pass = binding.edtCurrentPassword.text.toString()
-            if (pass.isEmpty()) {
-                binding.edtCurrentPassword.error = "Password cannot be empty!"
-                binding.edtCurrentPassword.requestFocus()
-                return@btnConfirm
-            }
-            user.let {
-                val userCredential = EmailAuthProvider.getCredential(it?.email!!, pass)
-                it.reauthenticate(userCredential).addOnCompleteListener { task->
-                    when {
-                        task.isSuccessful -> {
-                            binding.cvCurrentPassword.visibility = View.GONE
-                            binding.cvUpdatePassword.visibility = View.VISIBLE
-                        }
-                        task.exception is FirebaseAuthInvalidCredentialsException -> {
-                            binding.edtCurrentPassword.error = "Password wrong!"
-                            binding.edtCurrentPassword.requestFocus()
-                        }
-                        else -> {
-                            Toast.makeText(activity, "${task.exception?.message}", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-                }
-            }
-            binding.btnNewCancel.setOnClickListener {
-                binding.cvCurrentPassword.visibility = View.GONE
-                binding.cvUpdatePassword.visibility = View.GONE
-            }
-            binding.btnNewChange.setOnClickListener newChangePassword@{
-                val newPass = binding.edtNewPassword.text.toString()
-                val passConfirm = binding.edtConfirmPassword.text.toString()
-
-                if (newPass.isEmpty()) {
-                    binding.edtCurrentPassword.error = "Password cannot be empty!"
-                    binding.edtCurrentPassword.requestFocus()
-                    return@newChangePassword
-                }
-                else if (passConfirm.isEmpty()) {
-                    binding.edtCurrentPassword.error = "Repeat new password!"
-                    binding.edtCurrentPassword.requestFocus()
-                    return@newChangePassword
-                }
-                else if (newPass.length < 6) {
-                    binding.edtCurrentPassword.error = "Password must be more than 6 characters!"
-                    binding.edtCurrentPassword.requestFocus()
-                    return@newChangePassword
-                }
-                else if (passConfirm.length < 6) {
-                    binding.edtCurrentPassword.error = "Password and confirmation password are not the same!"
-                    binding.edtCurrentPassword.requestFocus()
-                    return@newChangePassword
-                }
-                else if (newPass != passConfirm) {
-                    binding.edtCurrentPassword.error = "Password Tidak Sama"
-                    binding.edtCurrentPassword.requestFocus()
-                    return@newChangePassword
-                }
-                user?.let { 
-                    user.updatePassword(newPass).addOnCompleteListener { 
-                        if (it.isSuccessful) {
-                            Toast.makeText(activity, "Password updated successfully", Toast.LENGTH_SHORT).show()
-                            successLogout()
-                        } else {
-                            Toast.makeText(activity, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-                }
-            }
-        }
-    }
+//    private fun changePassword() {
+//        auth = FirebaseAuth.getInstance()
+//        val user = auth.currentUser
+//
+//        binding.cvCurrentPassword.visibility = View.VISIBLE
+//
+//        binding.btnCancel.setOnClickListener {
+//            binding.cvCurrentPassword.visibility
+//        }
+//        binding.btnConfirm.setOnClickListener btnConfirm@{
+//            val pass = binding.edtCurrentPassword.text.toString()
+//            if (pass.isEmpty()) {
+//                binding.edtCurrentPassword.error = "Password cannot be empty!"
+//                binding.edtCurrentPassword.requestFocus()
+//                return@btnConfirm
+//            }
+//            user.let {
+//                val userCredential = EmailAuthProvider.getCredential(it?.email!!, pass)
+//                it.reauthenticate(userCredential).addOnCompleteListener { task->
+//                    when {
+//                        task.isSuccessful -> {
+//                            binding.cvCurrentPassword.visibility = View.GONE
+//                            binding.cvUpdatePassword.visibility = View.VISIBLE
+//                        }
+//                        task.exception is FirebaseAuthInvalidCredentialsException -> {
+//                            binding.edtCurrentPassword.error = "Password wrong!"
+//                            binding.edtCurrentPassword.requestFocus()
+//                        }
+//                        else -> {
+//                            Toast.makeText(activity, "${task.exception?.message}", Toast.LENGTH_SHORT).show()
+//                        }
+//                    }
+//                }
+//            }
+//            binding.btnNewCancel.setOnClickListener {
+//                binding.cvCurrentPassword.visibility = View.GONE
+//                binding.cvUpdatePassword.visibility = View.GONE
+//            }
+//            binding.btnNewChange.setOnClickListener newChangePassword@{
+//                val newPass = binding.edtNewPassword.text.toString()
+//                val passConfirm = binding.edtConfirmPassword.text.toString()
+//
+//                if (newPass.isEmpty()) {
+//                    binding.edtCurrentPassword.error = "Password cannot be empty!"
+//                    binding.edtCurrentPassword.requestFocus()
+//                    return@newChangePassword
+//                }
+//                else if (passConfirm.isEmpty()) {
+//                    binding.edtCurrentPassword.error = "Repeat new password!"
+//                    binding.edtCurrentPassword.requestFocus()
+//                    return@newChangePassword
+//                }
+//                else if (newPass.length < 6) {
+//                    binding.edtCurrentPassword.error = "Password must be more than 6 characters!"
+//                    binding.edtCurrentPassword.requestFocus()
+//                    return@newChangePassword
+//                }
+//                else if (passConfirm.length < 6) {
+//                    binding.edtCurrentPassword.error = "Password and confirmation password are not the same!"
+//                    binding.edtCurrentPassword.requestFocus()
+//                    return@newChangePassword
+//                }
+//                else if (newPass != passConfirm) {
+//                    binding.edtCurrentPassword.error = "Password Tidak Sama"
+//                    binding.edtCurrentPassword.requestFocus()
+//                    return@newChangePassword
+//                }
+//                user?.let {
+//                    user.updatePassword(newPass).addOnCompleteListener {
+//                        if (it.isSuccessful) {
+//                            Toast.makeText(activity, "Password updated successfully", Toast.LENGTH_SHORT).show()
+//                            successLogout()
+//                        } else {
+//                            Toast.makeText(activity, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
     private fun successLogout() {
         auth = FirebaseAuth.getInstance()
         auth.signOut()
