@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/creatorprofilenav"
+    app:startDestination="@id/informationFragment">
+
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="com.example.motionhack_2023_kel_5.creatorProfile.InformationFragment"
+        android:label="fragment_information"
+        tools:layout="@layout/fragment_information" />
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.example.motionhack_2023_kel_5.creatorProfile.ScheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" />
+    <fragment
+        android:id="@+id/forumFragment"
+        android:name="com.example.motionhack_2023_kel_5.creatorProfile.ForumFragment"
+        android:label="fragment_forum"
+        tools:layout="@layout/fragment_forum" />
+</navigation>

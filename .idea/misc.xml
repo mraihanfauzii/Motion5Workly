@@ -3,13 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/drawable/discovernav.xml" value="0.1" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/drawable/homenav.xml" value="0.1" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/drawable/profilenav.xml" value="0.109" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/font/fonts.xml" value="0.1" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/activity_creator_profile.xml" value="0.2" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/activity_first_screen.xml" value="0.1234375" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/activity_first_screen2.xml" value="0.16" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/activity_first_screen3.xml" value="0.1" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/activity_login.xml" value="0.14402173913043478" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/activity_notification.xml" value="0.2" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/activity_onboarding.xml" value="0.176" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/activity_onboarding1.xml" value="0.2" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/activity_onboarding2.xml" value="0.176" />
@@ -18,19 +22,28 @@
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/content_first_screen.xml" value="0.1234375" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/content_first_screen2.xml" value="0.1234375" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/creatorlist.xml" value="0.1" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_c_p_view_pager.xml" value="0.1" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_discover.xml" value="0.2" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_first.xml" value="0.1234375" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_first2.xml" value="0.1234375" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_first_screen.xml" value="0.109375" />
-        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_forum.xml" value="0.1" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_general.xml" value="0.14673913043478262" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_information.xml" value="0.264" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_schedule.xml" value="0.2" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_second.xml" value="0.1234375" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_second2.xml" value="0.1234375" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_second_screen.xml" value="0.1234375" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_splash_screen.xml" value="0.128" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_third_screen.xml" value="0.109375" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_view_pager.xml" value="0.1" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/meetinglist.xml" value="0.1" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/slider_onboarding_layout.xml" value="0.1" />
-        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/menu/nav_menu.xml" value="0.1" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/test.xml" value="0.1816123188405797" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/menu/nav_menu.xml" value="0.2" />
       </map>
     </option>
   </component>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notificationnav"
+    app:startDestination="@id/generalFragment">
+
+    <fragment
+        android:id="@+id/generalFragment"
+        android:name="com.example.motionhack_2023_kel_5.notification.GeneralFragment"
+        android:label="fragment_general"
+        tools:layout="@layout/fragment_general" />
+    <fragment
+        android:id="@+id/purchaseFragment"
+        android:name="com.example.motionhack_2023_kel_5.notification.PurchaseFragment"
+        android:label="fragment_purchase"
+        tools:layout="@layout/fragment_purchase" />
+</navigation>

@@ -6,6 +6,10 @@
         android:icon="@drawable/homenav"
         android:title="Home"/>
     <item
+        android:id="@+id/discoverFragment"
+        android:icon="@drawable/discovernav"
+        android:title="Discover"/>
+    <item
         android:id="@+id/profileFragment"
         android:icon="@drawable/profilenav"
         android:title="Profile"/>

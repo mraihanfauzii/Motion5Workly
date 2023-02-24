@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".HomeFragment">
-
+    tools:context=".DiscoverFragment">
+    
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,7 +13,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
+    
             <LinearLayout
                 android:id="@+id/linear_header"
                 android:layout_width="match_parent"
@@ -25,79 +25,44 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/tvHome"
+                    android:id="@+id/tvDiscover"
                     android:layout_weight="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Home"
+                    android:text="Discover"
                     android:fontFamily="@font/myfont"
                     android:textSize="@dimen/_25ssp"
                     android:textStyle="bold"/>
 
                 <ImageView
-                    android:id="@+id/imgNotification"
+                    android:id="@+id/img_search"
                     android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
+                    android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_notifications"/>
+                    android:src="@drawable/ic_search"/>
             </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvCreator"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_150sdp"
-                android:layout_marginStart="@dimen/_15sdp"
-                android:layout_marginEnd="@dimen/_15sdp"
-                app:cardCornerRadius="@dimen/_10sdp"
-                app:cardUseCompatPadding="true"
-                app:layout_constraintEnd_toEndOf="parent"
+            <TextView
+                android:id="@+id/checkThemOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/myfont"
+                android:text="Check them out"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/linear_header"
+                app:layout_constraintStart_toStartOf="@id/linear_header"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCheckThemOut"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linear_header">
-
-                <ImageView
-                    android:id="@+id/imgCreator"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#D9D9D9"
-                    android:scaleType="centerCrop" />
-
-                <TextView
-                    android:id="@+id/userCoin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:fontFamily="@font/myfont"
-                    android:text="Your Coins"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_15ssp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/edt_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/myfont"
-                    android:hint="Jumlah coin"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="45dp"/>
-
-                <Button
-                    android:id="@+id/btnFollowCreator"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginHorizontal="5dp"
-                    android:layout_marginStart="90dp"
-                    android:layout_marginBottom="56dp"
-                    android:layout_marginTop="45dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="#2F81ED"
-                    android:text="Buy coins"
-                    app:layout_constraintBottom_toTopOf="@+id/cardView"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-            </androidx.cardview.widget.CardView>
+                app:layout_constraintTop_toBottomOf="@id/checkThemOut"/>
 
             <TextView
                 android:id="@+id/upcomingSessions"
@@ -105,11 +70,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:fontFamily="@font/myfont"
-                android:text="You Scheduled Sessions"
+                android:text="Upcoming Sessions"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_15ssp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/cvCreator"
+                app:layout_constraintTop_toBottomOf="@id/rvCheckThemOut"
                 app:layout_constraintStart_toStartOf="@id/linear_header"/>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -122,12 +87,12 @@
                 app:layout_constraintTop_toBottomOf="@id/upcomingSessions"/>
 
             <TextView
-                android:id="@+id/tvFollowing"
+                android:id="@+id/tvCategories"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:fontFamily="@font/myfont"
-                android:text="Following"
+                android:text="Categories"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_15ssp"
                 android:textStyle="bold"
@@ -142,10 +107,10 @@
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:cardUseCompatPadding="true"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvFollowing">
+                app:layout_constraintTop_toBottomOf="@id/tvCategories">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvFollowing"
+                    android:id="@+id/rvCategories"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
             </androidx.cardview.widget.CardView>
