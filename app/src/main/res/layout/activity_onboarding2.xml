@@ -4,85 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e2ffff"
+    android:background="#F6F6F6"
     tools:context=".onboarding.Onboarding2Activity">
 
     <ImageView
-        android:id="@+id/titleImage2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/onboardingimage2"
+
+        android:layout_width="89dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="160dp"
+        android:src="@drawable/onboarding_logo"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17000002"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.058" />
+
+    <ImageView
+        android:id="@+id/titleImage2"
+        android:layout_width="275dp"
+        android:layout_height="214dp"
+        android:layout_marginEnd="68dp"
+        android:src="@drawable/onboarding_image_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.288" />
 
     <TextView
         android:id="@+id/textTitle2"
-        android:layout_width="match_parent"
+        android:layout_width="332dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:layout_marginBottom="19dp"
-        android:text="This is text title"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/pops"
+        android:text="Develop your skills from wherever you are and whenever you want."
         android:textAlignment="center"
-        android:textSize="20dp"
+        android:textSize="16dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textDesc2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleImage2" />
 
     <TextView
-        android:id="@+id/textDesc2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        android:textAlignment="center"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTitle2" />
-
-    <Button
-        android:id="@+id/btn_Next2"
+        android:id="@+id/btn_Next1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#1277DD"
+        android:layout_marginBottom="176dp"
+        android:textStyle="bold"
         android:text="Next"
+        android:fontFamily="@font/pops"
+        android:textColor="#09AEFC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDesc2"
-        app:layout_constraintVertical_bias="0.338" />
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
     <Button
-        android:id="@+id/btn_Skip2"
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_Start"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="Skip"
-        android:backgroundTint="#1277DD"
-        app:layout_constraintBottom_toTopOf="@+id/titleImage2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginBottom="176dp"
+        android:backgroundTint="#09AEFC"
+        android:text="Get Started"
+        android:fontFamily="@font/pops"
 
-    <Button
-        android:id="@+id/btn_Back1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="127dp"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="#1277DD"
-        android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDesc2"
-        app:layout_constraintVertical_bias="0.0" />
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

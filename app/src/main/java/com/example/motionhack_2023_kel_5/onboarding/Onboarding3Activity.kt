@@ -16,7 +16,7 @@ class Onboarding3Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_onboarding3)
 
-        btnStart = findViewById(R.id.btn_Start)
+//        btnStart = findViewById(R.id.btn_Start)
         btnBack = findViewById(R.id.btn_Back2)
 
         btnStart?.setOnClickListener {
