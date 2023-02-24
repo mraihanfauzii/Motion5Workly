@@ -18,8 +18,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/img_search"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgCreatorProfilePicture"
         android:layout_width="@dimen/_100sdp"
         android:layout_height="@dimen/_100sdp"
         android:scaleType="centerCrop"
@@ -43,7 +43,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_search"
+        app:layout_constraintTop_toBottomOf="@+id/imgCreatorProfilePicture"
         app:layout_constraintVertical_bias="0.018" />
 
     <TextView

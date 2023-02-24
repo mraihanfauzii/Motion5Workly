@@ -31,9 +31,9 @@ class DiscoverFragment : Fragment() {
     private lateinit var ProfessionAdapter: ProfessionListAdapter
 
     companion object{
-        const val Creator_ID = "com.example.motionhack_2023_kel_5.fragments.idCreator"
-        const val Creator_Name = "com.example.motionhack_2023_kel_5.fragments.nameCreator"
-        const val Creator_Picture = "com.example.motionhack_2023_kel_5.fragments.ppCreator"
+        const val Creator_ID = "com.example.motionhack_2023_kel_5.fragments.edtCreatorId"
+        const val Creator_Name = "com.example.motionhack_2023_kel_5.fragments.edtCreatorName"
+        const val Creator_Picture = "com.example.motionhack_2023_kel_5.fragments.imgCreatorProfilePicture"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
