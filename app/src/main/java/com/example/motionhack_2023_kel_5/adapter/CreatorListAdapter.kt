@@ -21,16 +21,17 @@ class CreatorListAdapter():RecyclerView.Adapter<CreatorListAdapter.CreatorListVi
     }
 
     override fun onBindViewHolder(holder: CreatorListViewHolder, position: Int) {
+        //Koneksi API pada Recycler View Check Them Out
         Glide.with(holder.itemView)
             .load(creatorsList[position].profilePhoto)
             .into(holder.binding.ivCreator)
-
         holder.binding.edtCreatorName.text = creatorsList[position].name
         holder.binding.edtCreatorProfession.text = creatorsList[position].professions[0].name
 
         holder.itemView.setOnClickListener {
             onItemClick.invoke(creatorsList[position])
         }
+
     }
 
     override fun getItemCount(): Int {

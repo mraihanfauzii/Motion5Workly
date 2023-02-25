@@ -18,6 +18,7 @@ import com.example.motionhack_2023_kel_5.data.Meetings.Meeting
 import com.example.motionhack_2023_kel_5.data.Meetings.MeetingList
 import com.example.motionhack_2023_kel_5.data.Professions.ProfessionList
 import com.example.motionhack_2023_kel_5.databinding.FragmentDiscoverBinding
+import com.example.motionhack_2023_kel_5.notification.NotificationActivity
 import com.example.motionhack_2023_kel_5.viewModel.DiscoverViewModel
 
 class DiscoverFragment : Fragment() {
@@ -65,12 +66,15 @@ class DiscoverFragment : Fragment() {
         professionRecyclerView()
 
         discoverMvvm.creatorItems()
-        discoverMvvm.meetingItems()
+        discoverMvvm.DiscoverMeetingItems()
         observerCreator()
         observerMeeting()
         observerProfession()
         onCreatorClick()
         onMeetingClick()
+        onProfessionClick()
+
+        onGoAllUpcomingSessions()
     }
 
     private fun creatorRecyclerView() {
@@ -125,6 +129,16 @@ class DiscoverFragment : Fragment() {
         }
     }
 
+    private fun onProfessionClick() {
+        ProfessionAdapter.onItemClick = { Creator ->
+            val intent = Intent(activity,CreatorProfileActivity::class.java)
+            intent.putExtra(Creator_ID,Creator.id)
+            intent.putExtra(Creator_Name,Creator.name)
+            intent.putExtra(Creator_Picture,Creator.profilePhoto)
+            startActivity(intent)
+        }
+    }
+
     private fun onMeetingClick() {
         MeetingAdapter.onItemClick = { Meeting ->
             val intent = Intent(activity,MeetingDetailsActivity::class.java)
@@ -133,6 +147,13 @@ class DiscoverFragment : Fragment() {
             intent.putExtra(MEETING_DateStartAt,Meeting.startAt)
             intent.putExtra(MEETING_DateEndAt,Meeting.endAt)
             intent.putExtra(MEETING_Description,Meeting.description)
+            startActivity(intent)
+        }
+    }
+
+    private fun onGoAllUpcomingSessions() {
+        binding.imgGoAllUpcomingSessions.setOnClickListener {
+            val intent = Intent(activity, AllUpcomingSessionsActivity::class.java)
             startActivity(intent)
         }
     }

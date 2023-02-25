@@ -8,6 +8,7 @@ import com.example.motionhack_2023_kel_5.data.Creators.Profession
 import com.example.motionhack_2023_kel_5.databinding.ProfessionlistBinding
 
 class ProfessionListAdapter(): RecyclerView.Adapter<ProfessionListAdapter.ProfessionListViewHolder>() {
+    lateinit var onItemClick:((Creator) -> Unit)
     private var creatorsList = ArrayList<Creator>()
 
     fun setCreators(creatorsList:ArrayList<Creator>){
@@ -27,6 +28,10 @@ class ProfessionListAdapter(): RecyclerView.Adapter<ProfessionListAdapter.Profes
 
     override fun onBindViewHolder(holder: ProfessionListViewHolder, position: Int) {
         holder.binding.tvProfession.text = creatorsList[position].professions[0].name
+
+        holder.itemView.setOnClickListener {
+            onItemClick.invoke(creatorsList[position])
+        }
     }
 
     override fun getItemCount(): Int {

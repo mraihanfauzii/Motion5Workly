@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/drawable/discovernav.xml" value="0.1" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/drawable/homenav.xml" value="0.1" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/drawable/profile.xml" value="0.1215" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/drawable/profilenav.xml" value="0.109" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/font/fonts.xml" value="0.1" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/activity_all_upcoming_sessions.xml" value="0.2" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/activity_creator_profile.xml" value="0.2" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/activity_first_screen.xml" value="0.1234375" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/activity_first_screen2.xml" value="0.16" />
@@ -42,7 +44,7 @@
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_third_screen.xml" value="0.109375" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/fragment_view_pager.xml" value="0.1" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/meetinglist.xml" value="0.6508474576271186" />
-        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/professionlist.xml" value="0.2" />
+        <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/professionlist.xml" value="0.4" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/slider_onboarding_layout.xml" value="0.1" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/layout/test.xml" value="0.1816123188405797" />
         <entry key="..\:/Users/muham/Downloads/MotionHack_2023_Kel_5/app/src/main/res/menu/nav_menu.xml" value="0.2" />

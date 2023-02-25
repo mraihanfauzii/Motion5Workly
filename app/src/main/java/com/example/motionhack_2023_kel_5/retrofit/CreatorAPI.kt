@@ -18,10 +18,15 @@ interface CreatorAPI {
     @GET("creators?page=1&size=50")
     fun Profession(): Call<KreatorList>
 
+    //Digunakan untuk menampilkan sedikit(10 meeting) UpcomingSessions di dalam fragment discover
     @GET("meetings?page=1&size=10")
-    fun Meeting(): Call<MeetingList>
+    fun DiscoverMeeting(): Call<MeetingList>
+
+    //Untuk menampilkan 50 meeting ketika user mengklik tanda panah kekanan disebelah tulisan Upcoming Sessions
+    @GET("meetings?page=1&size=50")
+    fun AllMeeting(): Call<MeetingList>
 
     @GET("meetings?")
-    fun getMeetingProfileDetails(@Query("q") username:String) : Call<MeetingList>
+    fun getMeetingProfileDetails(@Query("q") creator:String) : Call<MeetingList>
 
 }

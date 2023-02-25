@@ -8,8 +8,6 @@ import com.example.motionhack_2023_kel_5.data.Creators.Creator
 import com.example.motionhack_2023_kel_5.data.Creators.KreatorList
 import com.example.motionhack_2023_kel_5.data.Meetings.Meeting
 import com.example.motionhack_2023_kel_5.data.Meetings.MeetingList
-import com.example.motionhack_2023_kel_5.data.Professions.Profession
-import com.example.motionhack_2023_kel_5.data.Professions.ProfessionList
 import com.example.motionhack_2023_kel_5.retrofit.RetrofitInstance
 import retrofit2.Call
 import retrofit2.Callback
@@ -50,8 +48,36 @@ class DiscoverViewModel : ViewModel() {
         })
     }
 
-    fun meetingItems(){
-        RetrofitInstance.api.Meeting().enqueue(object : Callback<MeetingList>{
+    //Hanya menampilkan 10 Meeting Upcomming Sessions
+    fun DiscoverMeetingItems(){
+        RetrofitInstance.api.DiscoverMeeting().enqueue(object : Callback<MeetingList>{
+            override fun onResponse(call: Call<MeetingList>, response: Response<MeetingList>) {
+                if(response.body()!=null){
+                    meetingLiveData.value = response.body()!!.meetings
+                }
+            }
+            override fun onFailure(call: Call<MeetingList>, t: Throwable) {
+                Log.d("DiscoverFragment", t.message.toString())
+            }
+        })
+    }
+
+    //Menampilkan 50 meeting ketika tanda panah kanan disebelah upcoming sessions pada fragment discover diklik
+    fun AllMeetingItems(){
+        RetrofitInstance.api.AllMeeting().enqueue(object : Callback<MeetingList>{
+            override fun onResponse(call: Call<MeetingList>, response: Response<MeetingList>) {
+                if(response.body()!=null){
+                    meetingLiveData.value = response.body()!!.meetings
+                }
+            }
+            override fun onFailure(call: Call<MeetingList>, t: Throwable) {
+                Log.d("DiscoverFragment", t.message.toString())
+            }
+        })
+    }
+
+    fun ProfileCreatorMeetingItems(creator:String){
+        RetrofitInstance.api.getMeetingProfileDetails(creator).enqueue(object : Callback<MeetingList>{
             override fun onResponse(call: Call<MeetingList>, response: Response<MeetingList>) {
                 if(response.body()!=null){
                     meetingLiveData.value = response.body()!!.meetings
