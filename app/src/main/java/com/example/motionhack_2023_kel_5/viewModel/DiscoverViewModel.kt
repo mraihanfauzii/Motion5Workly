@@ -18,6 +18,24 @@ import retrofit2.Response
 class DiscoverViewModel : ViewModel() {
     private var creatorLiveData = MutableLiveData<List<Creator>>()
     private var meetingLiveData = MutableLiveData<List<Meeting>>()
+    private var meetingDetailsLiveData = MutableLiveData<Meeting>()
+
+    fun getMeetingDetail(username:String){
+        RetrofitInstance.api.getMeetingProfileDetails(username).enqueue(object : Callback<MeetingList>{
+            override fun onResponse(call: Call<MeetingList>, response: Response<MeetingList>) {
+                if(response.body()!=null){
+                    meetingDetailsLiveData.value = response.body()!!.meetings[0]
+                }
+                else
+                    return
+            }
+
+            override fun onFailure(call: Call<MeetingList>, t: Throwable) {
+                Log.d("MeetingDetailsActivity",t.message.toString())
+            }
+
+        })
+    }
 
     fun creatorItems(){
         RetrofitInstance.api.Creator().enqueue(object : Callback<KreatorList>{
@@ -51,5 +69,9 @@ class DiscoverViewModel : ViewModel() {
 
     fun observeMeetingLiveData(): LiveData<List<Meeting>> {
         return meetingLiveData
+    }
+
+    fun observeMeetingDetailsLiveData(): LiveData<Meeting> {
+        return meetingDetailsLiveData
     }
 }

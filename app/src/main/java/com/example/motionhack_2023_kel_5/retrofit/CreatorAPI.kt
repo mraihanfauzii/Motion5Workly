@@ -18,9 +18,10 @@ interface CreatorAPI {
     @GET("creators?page=1&size=50")
     fun Profession(): Call<KreatorList>
 
-    @GET("creators?")
-    fun getProfessionDetails(@Query("q") name:String) : Call<KreatorList>
-
-    @GET("meetings?page=1&size=50")
+    @GET("meetings?page=1&size=10")
     fun Meeting(): Call<MeetingList>
+
+    @GET("meetings?")
+    fun getMeetingProfileDetails(@Query("q") username:String) : Call<MeetingList>
+
 }

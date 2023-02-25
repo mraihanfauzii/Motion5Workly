@@ -31,6 +31,13 @@ class DiscoverFragment : Fragment() {
         const val Creator_ID = "com.example.motionhack_2023_kel_5.fragments.edtCreatorId"
         const val Creator_Name = "com.example.motionhack_2023_kel_5.fragments.edtCreatorName"
         const val Creator_Picture = "com.example.motionhack_2023_kel_5.fragments.imgCreatorProfilePicture"
+
+        const val MEETING_TITLE = "com.example.motionhack_2023_kel_5.fragments.edtCreatorId"
+        const val MEETING_CreatorName = "com.example.motionhack_2023_kel_5.fragments.edtCreatorName"
+        const val MEETING_CreatorUserName = "com.example.motionhack_2023_kel_5.fragments.edtCreatorName"
+        const val MEETING_DateStartAt = "com.example.motionhack_2023_kel_5.fragments.imgCreatorProfilePicture"
+        const val MEETING_DateEndAt = "com.example.motionhack_2023_kel_5.fragments.imgCreatorProfilePicture"
+        const val MEETING_Description = "com.example.motionhack_2023_kel_5.fragments.imgCreatorProfilePicture"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,6 +70,7 @@ class DiscoverFragment : Fragment() {
         observerMeeting()
         observerProfession()
         onCreatorClick()
+        onMeetingClick()
     }
 
     private fun creatorRecyclerView() {
@@ -113,6 +121,18 @@ class DiscoverFragment : Fragment() {
             intent.putExtra(Creator_ID,Creator.id)
             intent.putExtra(Creator_Name,Creator.name)
             intent.putExtra(Creator_Picture,Creator.profilePhoto)
+            startActivity(intent)
+        }
+    }
+
+    private fun onMeetingClick() {
+        MeetingAdapter.onItemClick = { Meeting ->
+            val intent = Intent(activity,MeetingDetailsActivity::class.java)
+            intent.putExtra(MEETING_TITLE,Meeting.title)
+            intent.putExtra(MEETING_CreatorName,Meeting.creator.name)
+            intent.putExtra(MEETING_DateStartAt,Meeting.startAt)
+            intent.putExtra(MEETING_DateEndAt,Meeting.endAt)
+            intent.putExtra(MEETING_Description,Meeting.description)
             startActivity(intent)
         }
     }

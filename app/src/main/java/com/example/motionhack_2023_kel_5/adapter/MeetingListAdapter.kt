@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.motionhack_2023_kel_5.data.Creators.Creator
 import com.example.motionhack_2023_kel_5.data.Meetings.Meeting
 import com.example.motionhack_2023_kel_5.databinding.MeetinglistBinding
 import java.text.SimpleDateFormat
@@ -11,6 +12,7 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 class MeetingListAdapter(): RecyclerView.Adapter<MeetingListAdapter.MeetingListViewHolder>(){
+    lateinit var onItemClick:((Meeting) -> Unit)
     private var meetingsList = ArrayList<Meeting>()
 
     fun setMeetings(meetingsList:ArrayList<Meeting>){
@@ -38,6 +40,10 @@ class MeetingListAdapter(): RecyclerView.Adapter<MeetingListAdapter.MeetingListV
         holder.binding.edtMeetingName.text = "Title : ${meetingsList[position].title}"
         holder.binding.edtMeetingCreator.text = "By : ${meetingsList[position].creator.name}"
         holder.binding.edtMeetingTime.text = "Time : ${StartAt} - ${EndAt}"
+
+        holder.itemView.setOnClickListener {
+            onItemClick.invoke(meetingsList[position])
+        }
     }
 
     override fun getItemCount(): Int {
