@@ -18,7 +18,6 @@ import retrofit2.Response
 class DiscoverViewModel : ViewModel() {
     private var creatorLiveData = MutableLiveData<List<Creator>>()
     private var meetingLiveData = MutableLiveData<List<Meeting>>()
-    private var professionLiveData = MutableLiveData<List<Profession>>()
 
     fun creatorItems(){
         RetrofitInstance.api.Creator().enqueue(object : Callback<KreatorList>{
@@ -46,28 +45,11 @@ class DiscoverViewModel : ViewModel() {
         })
     }
 
-    fun professionItems(){
-        RetrofitInstance.api.Profession().enqueue(object : Callback<ProfessionList>{
-            override fun onResponse(call: Call<ProfessionList>, response: Response<ProfessionList>) {
-                if(response.body()!=null){
-                    professionLiveData.value = response.body()!!.professions
-                }
-            }
-            override fun onFailure(call: Call<ProfessionList>, t: Throwable) {
-                Log.d("DiscoverFragment", t.message.toString())
-            }
-        })
-    }
-
     fun observeCreatorLiveData(): LiveData<List<Creator>> {
         return creatorLiveData
     }
 
     fun observeMeetingLiveData(): LiveData<List<Meeting>> {
         return meetingLiveData
-    }
-
-    fun observeProfessionLiveData(): LiveData<List<Profession>> {
-        return professionLiveData
     }
 }

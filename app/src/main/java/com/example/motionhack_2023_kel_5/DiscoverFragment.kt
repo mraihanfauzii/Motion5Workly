@@ -59,9 +59,9 @@ class DiscoverFragment : Fragment() {
 
         discoverMvvm.creatorItems()
         discoverMvvm.meetingItems()
-        discoverMvvm.professionItems()
         observerCreator()
         observerMeeting()
+        observerProfession()
         onCreatorClick()
     }
 
@@ -97,6 +97,13 @@ class DiscoverFragment : Fragment() {
         discoverMvvm.observeMeetingLiveData().observe(viewLifecycleOwner
         ) { meetingList->
             MeetingAdapter.setMeetings(meetingsList = meetingList as ArrayList<Meeting>)
+        }
+    }
+
+    private fun observerProfession() {
+        discoverMvvm.observeCreatorLiveData().observe(viewLifecycleOwner
+        ) { creatorList->
+            ProfessionAdapter.setCreators(creatorsList = creatorList as ArrayList<Creator>)
         }
     }
 

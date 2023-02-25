@@ -8,7 +8,6 @@ import com.example.motionhack_2023_kel_5.data.Creators.Creator
 import com.example.motionhack_2023_kel_5.databinding.CreatorlistBinding
 
 class CreatorListAdapter():RecyclerView.Adapter<CreatorListAdapter.CreatorListViewHolder>() {
-    private lateinit var binding: CreatorlistBinding
     lateinit var onItemClick:((Creator) -> Unit)
     private var creatorsList = ArrayList<Creator>()
 

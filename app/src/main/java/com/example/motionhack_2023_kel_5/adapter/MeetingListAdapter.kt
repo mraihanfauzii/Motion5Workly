@@ -37,7 +37,7 @@ class MeetingListAdapter(): RecyclerView.Adapter<MeetingListAdapter.MeetingListV
 
         holder.binding.edtMeetingName.text = "Title : ${meetingsList[position].title}"
         holder.binding.edtMeetingCreator.text = "By : ${meetingsList[position].creator.name}"
-        holder.binding.edtMeetingTime.text = "Start At : ${StartAt} - ${EndAt}"
+        holder.binding.edtMeetingTime.text = "Time : ${StartAt} - ${EndAt}"
     }
 
     override fun getItemCount(): Int {

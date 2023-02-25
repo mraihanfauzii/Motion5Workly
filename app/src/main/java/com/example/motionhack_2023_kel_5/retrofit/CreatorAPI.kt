@@ -15,8 +15,8 @@ interface CreatorAPI {
     @GET("creators?")
     fun getCreatorDetails(@Query("q") username:String) : Call<KreatorList>
 
-    @GET("professions?page=1&size=50")
-    fun Profession(): Call<ProfessionList>
+    @GET("creators?page=1&size=50")
+    fun Profession(): Call<KreatorList>
 
     @GET("creators?")
     fun getProfessionDetails(@Query("q") name:String) : Call<KreatorList>
