@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bck"
     tools:context=".LoginActivity">
 
     <LinearLayout
@@ -12,10 +13,31 @@
         android:orientation="vertical"
         android:padding="14dp">
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="255dp"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="Login Sekarang" />
+            android:layout_above="@+id/tv_2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="91dp"
+            android:layout_marginEnd="146dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/pops"
+            android:text="Welcome Back!"
+            android:textColor="#000000"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout1"
+            android:layout_marginBottom="47dp"
+            android:fontFamily="@font/pops"
+            android:text="Please login to continue"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -26,6 +48,7 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/border"
                 android:inputType="textEmailAddress"
                 android:hint="Alamat Email"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -41,6 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
+                android:background="@drawable/border"
                 android:hint="Kata Sandi"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -48,7 +72,7 @@
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="#09AEFC"
             android:layout_marginTop="14dp"
             android:text="Login"/>
 
@@ -61,11 +85,11 @@
 
         <Button
             android:id="@+id/btn_register"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            android:backgroundTint="#db0000"
-            android:text="Daftar Sekarang"/>
+            android:backgroundTint="#09AEFC"
+            android:text="Daftar Sekarang" />
 
     </LinearLayout>
 </ScrollView>

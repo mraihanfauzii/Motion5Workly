@@ -16,7 +16,6 @@ import com.example.motionhack_2023_kel_5.data.Creators.Creator
 import com.example.motionhack_2023_kel_5.data.Creators.Profession
 import com.example.motionhack_2023_kel_5.data.Meetings.Meeting
 import com.example.motionhack_2023_kel_5.data.Meetings.MeetingList
-import com.example.motionhack_2023_kel_5.data.Professions.ProfessionList
 import com.example.motionhack_2023_kel_5.databinding.FragmentDiscoverBinding
 import com.example.motionhack_2023_kel_5.notification.NotificationActivity
 import com.example.motionhack_2023_kel_5.viewModel.DiscoverViewModel

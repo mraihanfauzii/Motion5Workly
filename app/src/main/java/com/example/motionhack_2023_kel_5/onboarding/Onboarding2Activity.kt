@@ -18,19 +18,8 @@ class Onboarding2Activity : AppCompatActivity() {
         setContentView(R.layout.activity_onboarding2)
 
         btnNext = findViewById(R.id.btn_Next2)
-        btnBack = findViewById(R.id.btn_Back1)
-        btnSkip = findViewById(R.id.btn_Skip2)
 
         btnNext?.setOnClickListener {
-            startActivity(Intent(this, Onboarding3Activity::class.java))
-        }
-
-        btnBack?.setOnClickListener {
-            startActivity(Intent(this, Onboarding1Activity::class.java))
-        }
-
-        btnSkip?.setOnClickListener {
-            finishAffinity()
             startActivity(Intent(this, LoginActivity::class.java))
         }
     }
