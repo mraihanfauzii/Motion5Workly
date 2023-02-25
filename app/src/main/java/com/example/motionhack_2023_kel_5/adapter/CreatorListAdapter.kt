@@ -26,6 +26,9 @@ class CreatorListAdapter():RecyclerView.Adapter<CreatorListAdapter.CreatorListVi
             .load(creatorsList[position].profilePhoto)
             .into(holder.binding.ivCreator)
 
+        holder.binding.edtCreatorName.text = creatorsList[position].name
+        holder.binding.edtCreatorProfession.text = creatorsList[position].professions[0].name
+
         holder.itemView.setOnClickListener {
             onItemClick.invoke(creatorsList[position])
         }

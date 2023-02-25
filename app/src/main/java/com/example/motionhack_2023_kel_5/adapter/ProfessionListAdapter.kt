@@ -27,9 +27,9 @@ class ProfessionListAdapter(): RecyclerView.Adapter<ProfessionListAdapter.Profes
     }
 
     override fun onBindViewHolder(holder: ProfessionListAdapter.ProfessionListViewHolder, position: Int) {
-        Glide.with(holder.itemView)
-            .load(professionsList[position].name)
-            .into(holder.binding.ivProfession)
+       // Glide.with(holder.itemView)
+        //    .load(professionsList[position].name)
+          //  .into(holder.binding.ivProfession)
     }
 
     override fun getItemCount(): Int {

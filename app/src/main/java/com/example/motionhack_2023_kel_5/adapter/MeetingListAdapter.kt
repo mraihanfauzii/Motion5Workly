@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.motionhack_2023_kel_5.data.Meetings.Meeting
 import com.example.motionhack_2023_kel_5.databinding.MeetinglistBinding
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class MeetingListAdapter(): RecyclerView.Adapter<MeetingListAdapter.MeetingListViewHolder>(){
     private var meetingsList = ArrayList<Meeting>()
@@ -20,9 +23,21 @@ class MeetingListAdapter(): RecyclerView.Adapter<MeetingListAdapter.MeetingListV
     }
 
     override fun onBindViewHolder(holder: MeetingListViewHolder, position: Int) {
-        Glide.with(holder.itemView)
-            .load(meetingsList[position].description)
-            .into(holder.binding.ivMeeting)
+        val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault())
+        inputFormat.timeZone = TimeZone.getTimeZone("UTC")
+
+        val outputFormat = SimpleDateFormat("dd MMMM yyyy, HH:mm:ss", Locale.getDefault())
+        outputFormat.timeZone = TimeZone.getDefault()
+
+        val InputStartAt = inputFormat.parse(meetingsList[position].startAt)
+        val InputEndAt = inputFormat.parse(meetingsList[position].endAt)
+
+        val StartAt = outputFormat.format(InputStartAt)
+        val EndAt = outputFormat.format(InputEndAt)
+
+        holder.binding.edtMeetingName.text = "Title : ${meetingsList[position].title}"
+        holder.binding.edtMeetingCreator.text = "By : ${meetingsList[position].creator.name}"
+        holder.binding.edtMeetingTime.text = "Start At : ${StartAt} - ${EndAt}"
     }
 
     override fun getItemCount(): Int {
