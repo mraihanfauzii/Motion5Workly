@@ -29,15 +29,15 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="24sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/civ_user"
-                android:layout_marginTop="10dp"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:background="@drawable/profile"/>
+                android:layout_marginTop="10dp"
+                android:background="@drawable/profile" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -47,28 +47,28 @@
                 android:text="*Tap base profile picture to set picture"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textStyle="italic"
-                android:textSize="10sp"/>
+                android:textSize="10sp"
+                android:textStyle="italic" />
+
             <TextView
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
+                android:layout_marginTop="5dp"
                 android:text="Name"
-                />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/edt_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Name"/>
+                android:hint="Name" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:layout_marginTop="10dp"
-                android:text="Email"/>
+                android:text="Email"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/edt_email"
@@ -79,47 +79,47 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:layout_marginTop="10dp"
-                android:text="No Telepon"/>
+                android:text="Phone Number"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/edt_no_telepon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="No Telepon" />
+                android:hint="Phone Number" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:layout_marginTop="5dp"
-                android:text="Lupa password ?"
-                android:textAlignment="center"/>
+                android:text="Forgot password ?"
+                android:textAlignment="center"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btn_changePassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Change Password"
-                android:backgroundTint="#e50914"/>
+                android:backgroundTint="#09AEFC"
+                android:text="Change Password" />
 
             <Button
                 android:id="@+id/btn_deleteAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Delete Account"
-                android:backgroundTint="#831010"/>
+                android:backgroundTint="#2F81ED"
+                android:text="Delete Account" />
 
             <Button
                 android:id="@+id/btn_logout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Logout"
-                android:backgroundTint="#181818"/>
+                android:backgroundTint="#000080"
+                android:text="Logout" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

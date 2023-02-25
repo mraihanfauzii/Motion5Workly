@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/border"
                 android:inputType="textEmailAddress"
-                android:hint="Alamat Email"/>
+                android:hint="Email"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:background="@drawable/border"
-                android:hint="Kata Sandi"/>
+                android:hint="Password"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -79,17 +79,18 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Belum Memiliki Akun ?"
+            android:text="Don’t have an account?"
             android:textAlignment="center"
             android:layout_marginTop="14dp"/>
 
         <Button
             android:id="@+id/btn_register"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            android:backgroundTint="#09AEFC"
-            android:text="Daftar Sekarang" />
+            android:backgroundTint="#ffffff"
+            android:textColor="#09AEFC"
+            android:text="Register" />
 
     </LinearLayout>
 </ScrollView>
