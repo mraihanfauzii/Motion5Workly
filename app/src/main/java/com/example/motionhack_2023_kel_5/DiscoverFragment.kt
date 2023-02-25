@@ -13,9 +13,9 @@ import com.example.motionhack_2023_kel_5.adapter.MeetingListAdapter
 import com.example.motionhack_2023_kel_5.adapter.ProfessionListAdapter
 import com.example.motionhack_2023_kel_5.creatorProfile.CreatorProfileActivity
 import com.example.motionhack_2023_kel_5.data.Creators.Creator
+import com.example.motionhack_2023_kel_5.data.Creators.Profession
 import com.example.motionhack_2023_kel_5.data.Meetings.Meeting
 import com.example.motionhack_2023_kel_5.data.Meetings.MeetingList
-import com.example.motionhack_2023_kel_5.data.Professions.Profession
 import com.example.motionhack_2023_kel_5.data.Professions.ProfessionList
 import com.example.motionhack_2023_kel_5.databinding.FragmentDiscoverBinding
 import com.example.motionhack_2023_kel_5.viewModel.DiscoverViewModel
@@ -23,11 +23,8 @@ import com.example.motionhack_2023_kel_5.viewModel.DiscoverViewModel
 class DiscoverFragment : Fragment() {
     private lateinit var binding:FragmentDiscoverBinding
     private lateinit var discoverMvvm:DiscoverViewModel
-    private lateinit var Creator: Creator
     private lateinit var CreatorAdapter:CreatorListAdapter
-    private lateinit var Meeting: Meeting
     private lateinit var MeetingAdapter: MeetingListAdapter
-    private lateinit var Profession: Profession
     private lateinit var ProfessionAdapter: ProfessionListAdapter
 
     companion object{
@@ -65,7 +62,6 @@ class DiscoverFragment : Fragment() {
         discoverMvvm.professionItems()
         observerCreator()
         observerMeeting()
-        observerProfession()
         onCreatorClick()
     }
 
@@ -101,13 +97,6 @@ class DiscoverFragment : Fragment() {
         discoverMvvm.observeMeetingLiveData().observe(viewLifecycleOwner
         ) { meetingList->
             MeetingAdapter.setMeetings(meetingsList = meetingList as ArrayList<Meeting>)
-        }
-    }
-
-    private fun observerProfession() {
-        discoverMvvm.observeProfessionLiveData().observe(viewLifecycleOwner
-        ) { professionList->
-            ProfessionAdapter.setProfessions(professionsList = professionList as ArrayList<Profession>)
         }
     }
 

@@ -14,4 +14,19 @@
         android:layout_height="@dimen/_50sdp"
         android:scaleType="centerCrop" />
 
+    <TextView
+        android:id="@+id/edtCreatorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:fontFamily="@font/myfont"
+        android:text="Nama Kreator"
+        android:textSize="@dimen/_5ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCreatorProfilePicture"
+        app:layout_constraintVertical_bias="0.018" />
+
 </androidx.cardview.widget.CardView>

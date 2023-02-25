@@ -64,10 +64,12 @@ class CreatorProfileActivity : AppCompatActivity() {
             override fun onChanged(t: Creator?) {
                 val creator = t
 
+                binding.edtCategory.text = creator!!.professions[0].name
                 binding.edtCreatorName.text = creator!!.name
                 binding.edtCreatorJob.text = creator!!.username
                 Glide.with(this@CreatorProfileActivity)
                     .load(creatorPicture)
+                    .error(R.drawable.profile)
                     .into(binding.imgCreatorProfilePicture)
             }
 

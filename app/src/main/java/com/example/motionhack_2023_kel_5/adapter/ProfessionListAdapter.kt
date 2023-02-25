@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.motionhack_2023_kel_5.data.Professions.Profession
+import com.example.motionhack_2023_kel_5.data.Creators.Profession
 import com.example.motionhack_2023_kel_5.databinding.MeetinglistBinding
 import com.example.motionhack_2023_kel_5.databinding.ProfessionlistBinding
 

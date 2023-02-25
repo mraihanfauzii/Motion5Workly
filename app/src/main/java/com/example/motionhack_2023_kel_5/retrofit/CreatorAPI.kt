@@ -18,6 +18,9 @@ interface CreatorAPI {
     @GET("professions?page=1&size=50")
     fun Profession(): Call<ProfessionList>
 
+    @GET("creators?")
+    fun getProfessionDetails(@Query("q") name:String) : Call<KreatorList>
+
     @GET("meetings?page=1&size=50")
     fun Meeting(): Call<MeetingList>
 }
